@@ -13,6 +13,10 @@
 		423DAFFB2BA8365000B81A0F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 423DAFFA2BA8365000B81A0F /* Base */; };
 		423DAFFD2BA8365100B81A0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 423DAFFC2BA8365100B81A0F /* Assets.xcassets */; };
 		423DB0002BA8365100B81A0F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 423DAFFF2BA8365100B81A0F /* Base */; };
+		423DB0182BA844A300B81A0F /* ReversedCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423DB0162BA844A300B81A0F /* ReversedCollectionViewController.swift */; };
+		42E0EED62BA87E4D00D123C1 /* UICollectionView.RegistrationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E0EED52BA87E4D00D123C1 /* UICollectionView.RegistrationExtensions.swift */; };
+		42E0EED82BA87E9400D123C1 /* BottomToTopCollectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E0EED72BA87E9400D123C1 /* BottomToTopCollectionProtocol.swift */; };
+		42E0EEDA2BA87F0100D123C1 /* BottomToTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E0EED92BA87F0100D123C1 /* BottomToTopViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		423DAFFC2BA8365100B81A0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		423DAFFF2BA8365100B81A0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		423DB0012BA8365100B81A0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		423DB0162BA844A300B81A0F /* ReversedCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReversedCollectionViewController.swift; sourceTree = "<group>"; };
+		42E0EED52BA87E4D00D123C1 /* UICollectionView.RegistrationExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.RegistrationExtensions.swift; sourceTree = "<group>"; };
+		42E0EED72BA87E9400D123C1 /* BottomToTopCollectionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomToTopCollectionProtocol.swift; sourceTree = "<group>"; };
+		42E0EED92BA87F0100D123C1 /* BottomToTopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomToTopViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,12 +67,24 @@
 				423DAFF32BA8365000B81A0F /* AppDelegate.swift */,
 				423DAFF52BA8365000B81A0F /* SceneDelegate.swift */,
 				423DAFF72BA8365000B81A0F /* ViewController.swift */,
+				42E0EED92BA87F0100D123C1 /* BottomToTopViewController.swift */,
+				42E0EED72BA87E9400D123C1 /* BottomToTopCollectionProtocol.swift */,
+				423DB0072BA83D4C00B81A0F /* Reversed */,
+				42E0EED52BA87E4D00D123C1 /* UICollectionView.RegistrationExtensions.swift */,
 				423DAFF92BA8365000B81A0F /* Main.storyboard */,
 				423DAFFC2BA8365100B81A0F /* Assets.xcassets */,
 				423DAFFE2BA8365100B81A0F /* LaunchScreen.storyboard */,
 				423DB0012BA8365100B81A0F /* Info.plist */,
 			);
 			path = BottomToTopCollectionView;
+			sourceTree = "<group>";
+		};
+		423DB0072BA83D4C00B81A0F /* Reversed */ = {
+			isa = PBXGroup;
+			children = (
+				423DB0162BA844A300B81A0F /* ReversedCollectionViewController.swift */,
+			);
+			path = Reversed;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,8 +180,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42E0EED62BA87E4D00D123C1 /* UICollectionView.RegistrationExtensions.swift in Sources */,
+				42E0EED82BA87E9400D123C1 /* BottomToTopCollectionProtocol.swift in Sources */,
+				423DB0182BA844A300B81A0F /* ReversedCollectionViewController.swift in Sources */,
 				423DAFF82BA8365000B81A0F /* ViewController.swift in Sources */,
 				423DAFF42BA8365000B81A0F /* AppDelegate.swift in Sources */,
+				42E0EEDA2BA87F0100D123C1 /* BottomToTopViewController.swift in Sources */,
 				423DAFF62BA8365000B81A0F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
