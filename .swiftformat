@@ -1,0 +1,10 @@
+--swiftversion 5.9.0
+
+--exclude Pods
+--exclude *.generated.swift
+
+--trimwhitespace nonblank-lines
+--stripunusedargs closure-only
+--disable strongOutlets
+--wraparguments before-first
+--self insert
