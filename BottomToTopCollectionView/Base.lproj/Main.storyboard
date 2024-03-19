@@ -32,15 +32,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="AYW-Ud-v4e">
-                                <rect key="frame" x="10" y="103" width="373" height="34.333333333333343"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="AYW-Ud-v4e">
+                                <rect key="frame" x="10" y="103" width="373" height="123"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B8e-dH-YJX">
                                         <rect key="frame" x="0.0" y="0.0" width="373" height="34.333333333333336"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Reversed Collection View"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Reversed CollectionView"/>
                                         <connections>
                                             <action selector="reversedCollectionViewButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zUd-q0-h1t"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3jX-qm-ese">
+                                        <rect key="frame" x="0.0" y="44.333333333333343" width="373" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Custom CollectionViewLayout"/>
+                                        <connections>
+                                            <action selector="customCollectionViewLayoutButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Eo5-su-dcs"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wx2-yw-ljS">
+                                        <rect key="frame" x="0.0" y="88.666666666666657" width="373" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Adjust CollectionView Inset"/>
+                                        <connections>
+                                            <action selector="adjustCollectionViewInsetButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Riz-wU-8D4"/>
                                         </connections>
                                     </button>
                                 </subviews>
