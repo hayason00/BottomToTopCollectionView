@@ -14,11 +14,11 @@ extension ReversedListView {
         var body: some View {
             ZStack(alignment: .leading) {
                 Color(
-                    hue: (Double(self.num) / 16).truncatingRemainder(dividingBy: 1),
+                    hue: (Double(num) / 16).truncatingRemainder(dividingBy: 1),
                     saturation: 0.2,
                     brightness: 0.95
                 )
-                Text(self.num.description)
+                Text(num.description)
                     .padding(.horizontal)
             }
         }

@@ -11,15 +11,15 @@ final class BottomToTopCollectionViewFlowLayout: UICollectionViewFlowLayout {
     private static let itemHeight: CGFloat = 40
 
     private var contentHeight: CGFloat {
-        CGFloat(self.collectionView?.numberOfItems(inSection: 0) ?? 0) * (Self.itemHeight + self.minimumLineSpacing) - self.minimumLineSpacing
+        CGFloat(collectionView?.numberOfItems(inSection: 0) ?? 0) * (Self.itemHeight + minimumLineSpacing) - minimumLineSpacing
     }
 
     private var contentWidth: CGFloat {
-        self.collectionView?.bounds.width ?? 0
+        collectionView?.bounds.width ?? 0
     }
 
     override var collectionViewContentSize: CGSize {
-        CGSize(width: self.contentWidth, height: self.contentHeight)
+        CGSize(width: contentWidth, height: contentHeight)
     }
 
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
@@ -35,8 +35,8 @@ final class BottomToTopCollectionViewFlowLayout: UICollectionViewFlowLayout {
         let numberOfItem = collectionView.numberOfItems(inSection: indexPath.section)
         attributes.frame = CGRect(
             x: 0,
-            y: max(self.contentHeight, collectionView.bounds.height) - CGFloat(numberOfItem - indexPath.item) * (Self.itemHeight + self.minimumLineSpacing) - self.minimumLineSpacing,
-            width: self.contentWidth,
+            y: max(contentHeight, collectionView.bounds.height) - CGFloat(numberOfItem - indexPath.item) * (Self.itemHeight + minimumLineSpacing) - minimumLineSpacing,
+            width: contentWidth,
             height: Self.itemHeight
         )
         return attributes

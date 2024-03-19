@@ -14,18 +14,18 @@ final class SwiftUIReversedListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.addChild(self.hostingController)
-        self.view.addSubview(self.hostingController.view)
-        self.hostingController.didMove(toParent: self)
-        self.setupConstraints()
+        addChild(hostingController)
+        view.addSubview(hostingController.view)
+        hostingController.didMove(toParent: self)
+        setupConstraints()
     }
 
     private func setupConstraints() {
-        self.hostingController.view.translatesAutoresizingMaskIntoConstraints = false
-        self.hostingController.view.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor).isActive = true
-        self.hostingController.view.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor).isActive = true
-        self.hostingController.view.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor).isActive = true
-        self.hostingController.view.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+        hostingController.view.translatesAutoresizingMaskIntoConstraints = false
+        hostingController.view.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+        hostingController.view.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
+        hostingController.view.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
+        hostingController.view.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
     }
 }
 
@@ -33,6 +33,6 @@ final class SwiftUIReversedListViewController: UIViewController {
 
 extension SwiftUIReversedListViewController: BottomToTopCollectionProtocol {
     func appendCell() {
-        self.hostingController.rootView.numberOfItems += 1
+        hostingController.rootView.numberOfItems += 1
     }
 }
