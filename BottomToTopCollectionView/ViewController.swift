@@ -23,4 +23,9 @@ final class ViewController: UIViewController {
         let vc = BottomToTopViewController(collectionViewController: AdjustCollectionViewInsetViewController())
         self.navigationController?.pushViewController(vc, animated: true)
     }
+
+    @IBAction func swiftUIReversedListButtonDidTap(_ sender: UIButton) {
+        let vc = BottomToTopViewController(collectionViewController: SwiftUIReversedListViewController())
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
