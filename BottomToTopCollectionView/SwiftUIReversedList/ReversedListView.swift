@@ -13,7 +13,7 @@ struct ReversedListView: View {
     var body: some View {
         ScrollView {
             LazyVStack(alignment: .leading) {
-                ForEach((0 ..< self.numberOfItems).reversed(), id: \.self) { index in
+                ForEach((0 ..< numberOfItems).reversed(), id: \.self) { index in
                     ColorCell(num: index)
                         .frame(height: 40)
                         .rotationEffect(.degrees(180))

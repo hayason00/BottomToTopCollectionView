@@ -14,26 +14,26 @@ final class ReversedCollectionViewController: UIViewController {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         return collectionView
     }()
-    
+
     private let cellRegistration = UICollectionView.CellRegistration.colorCellRegistration()
 
     private var numberOfItems = 0
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.addSubview(self.collectionView)
-        self.setupConstraints()
-        self.collectionView.transform = CGAffineTransform(scaleX: 1, y: -1)
-        self.collectionView.dataSource = self
-        self.collectionView.delegate = self
+        view.addSubview(collectionView)
+        setupConstraints()
+        collectionView.transform = CGAffineTransform(scaleX: 1, y: -1)
+        collectionView.dataSource = self
+        collectionView.delegate = self
     }
-    
+
     private func setupConstraints() {
-        self.collectionView.translatesAutoresizingMaskIntoConstraints = false
-        self.collectionView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor).isActive = true
-        self.collectionView.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor).isActive = true
-        self.collectionView.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor).isActive = true
-        self.collectionView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+        collectionView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
+        collectionView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
+        collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
     }
 }
 
@@ -41,8 +41,8 @@ final class ReversedCollectionViewController: UIViewController {
 
 extension ReversedCollectionViewController: BottomToTopCollectionProtocol {
     func appendCell() {
-        self.numberOfItems += 1
-        self.collectionView.reloadData()
+        numberOfItems += 1
+        collectionView.reloadData()
     }
 }
 
@@ -50,14 +50,14 @@ extension ReversedCollectionViewController: BottomToTopCollectionProtocol {
 
 extension ReversedCollectionViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        self.numberOfItems
+        numberOfItems
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueConfiguredReusableCell(
-            using: self.cellRegistration,
+            using: cellRegistration,
             for: indexPath,
-            item: self.collectionView(collectionView, numberOfItemsInSection: indexPath.section) - indexPath.item - 1
+            item: collectionView.numberOfItems(inSection: indexPath.section) - indexPath.item - 1
         )
         cell.transform = CGAffineTransform(scaleX: 1, y: -1)
         return cell

@@ -25,35 +25,37 @@ final class AdjustCollectionViewInsetViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.collectionView.dataSource = self
-        self.collectionView.delegate = self
-        self.containerView.addSubview(self.collectionView)
-        self.view.addSubview(self.containerView)
-        self.setupConstraints()
-        self.adjustCollectionViewTopConstraint()
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        containerView.addSubview(collectionView)
+        view.addSubview(containerView)
+        setupConstraints()
+        adjustCollectionViewTopConstraint()
     }
 
     private func setupConstraints() {
-        self.collectionView.translatesAutoresizingMaskIntoConstraints = false
-        self.collectionViewTopConstraint = self.collectionView.topAnchor.constraint(equalTo: self.containerView.topAnchor)
-        self.collectionViewTopConstraint?.isActive = true
-        self.collectionView.leadingAnchor.constraint(equalTo: self.containerView.leadingAnchor).isActive = true
-        self.collectionView.trailingAnchor.constraint(equalTo: self.containerView.trailingAnchor).isActive = true
-        self.collectionView.bottomAnchor.constraint(equalTo: self.containerView.bottomAnchor).isActive = true
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionViewTopConstraint = collectionView.topAnchor.constraint(equalTo: containerView.topAnchor)
+        collectionViewTopConstraint?.isActive = true
+        collectionView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor).isActive = true
+        collectionView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor).isActive = true
+        collectionView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor).isActive = true
 
-        self.containerView.translatesAutoresizingMaskIntoConstraints = false
-        self.containerView.topAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.topAnchor).isActive = true
-        self.containerView.leadingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.leadingAnchor).isActive = true
-        self.containerView.trailingAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.trailingAnchor).isActive = true
-        self.containerView.bottomAnchor.constraint(equalTo: self.view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+        containerView.translatesAutoresizingMaskIntoConstraints = false
+        containerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+        containerView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
+        containerView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
+        containerView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
     }
 
     private func adjustCollectionViewTopConstraint() {
-        let cancellable = self.collectionView.publisher(for: \.contentSize).map(\.height).removeDuplicates().sink { [weak self] contentHeight in
-            guard let self else { return }
-            self.collectionViewTopConstraint?.constant = max(self.containerView.bounds.height - contentHeight, 0)
+        collectionView.publisher(for: \.contentSize).map(\.height).removeDuplicates().sink { [weak self] contentHeight in
+            guard let collectionViewTopConstraint = self?.collectionViewTopConstraint,
+                  let containerViewBoundsHeight = self?.containerView.bounds.height
+            else { return }
+            collectionViewTopConstraint.constant = max(containerViewBoundsHeight - contentHeight, 0)
         }
-        self.cancellables.insert(cancellable)
+        .store(in: &cancellables)
     }
 }
 
@@ -61,8 +63,8 @@ final class AdjustCollectionViewInsetViewController: UIViewController {
 
 extension AdjustCollectionViewInsetViewController: BottomToTopCollectionProtocol {
     func appendCell() {
-        self.numberOfItems += 1
-        self.collectionView.reloadData()
+        numberOfItems += 1
+        collectionView.reloadData()
     }
 }
 
@@ -70,12 +72,12 @@ extension AdjustCollectionViewInsetViewController: BottomToTopCollectionProtocol
 
 extension AdjustCollectionViewInsetViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        self.numberOfItems
+        numberOfItems
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueConfiguredReusableCell(
-            using: self.cellRegistration,
+            using: cellRegistration,
             for: indexPath,
             item: indexPath.item
         )
