@@ -54,7 +54,7 @@ extension CustomCollectionViewLayoutViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueConfiguredReusableCell(
             using: self.cellRegistration,
             for: indexPath,
-            item: indexPath.item + 1
+            item: indexPath.item
         )
         return cell
     }

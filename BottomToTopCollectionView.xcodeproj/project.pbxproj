@@ -19,6 +19,7 @@
 		42E0EEDA2BA87F0100D123C1 /* BottomToTopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E0EED92BA87F0100D123C1 /* BottomToTopViewController.swift */; };
 		BFAFB74F2BA94E6E00F138AC /* CustomCollectionViewLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAFB74E2BA94E6E00F138AC /* CustomCollectionViewLayoutViewController.swift */; };
 		BFAFB7512BA94E8E00F138AC /* BottomToTopCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAFB7502BA94E8E00F138AC /* BottomToTopCollectionViewFlowLayout.swift */; };
+		BFAFB7542BA97D3900F138AC /* AdjustCollectionViewInsetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAFB7532BA97D3900F138AC /* AdjustCollectionViewInsetViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		42E0EED92BA87F0100D123C1 /* BottomToTopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomToTopViewController.swift; sourceTree = "<group>"; };
 		BFAFB74E2BA94E6E00F138AC /* CustomCollectionViewLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewLayoutViewController.swift; sourceTree = "<group>"; };
 		BFAFB7502BA94E8E00F138AC /* BottomToTopCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomToTopCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		BFAFB7532BA97D3900F138AC /* AdjustCollectionViewInsetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustCollectionViewInsetViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				42E0EED72BA87E9400D123C1 /* BottomToTopCollectionProtocol.swift */,
 				423DB0072BA83D4C00B81A0F /* Reversed */,
 				BFAFB74D2BA94E4B00F138AC /* CustomCollectionViewLayout */,
+				BFAFB7522BA97D1300F138AC /* AdjustCollectionViewInset */,
 				42E0EED52BA87E4D00D123C1 /* UICollectionView.RegistrationExtensions.swift */,
 				423DAFF92BA8365000B81A0F /* Main.storyboard */,
 				423DAFFC2BA8365100B81A0F /* Assets.xcassets */,
@@ -99,6 +102,14 @@
 				BFAFB7502BA94E8E00F138AC /* BottomToTopCollectionViewFlowLayout.swift */,
 			);
 			path = CustomCollectionViewLayout;
+			sourceTree = "<group>";
+		};
+		BFAFB7522BA97D1300F138AC /* AdjustCollectionViewInset */ = {
+			isa = PBXGroup;
+			children = (
+				BFAFB7532BA97D3900F138AC /* AdjustCollectionViewInsetViewController.swift */,
+			);
+			path = AdjustCollectionViewInset;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +213,7 @@
 				423DAFF42BA8365000B81A0F /* AppDelegate.swift in Sources */,
 				42E0EEDA2BA87F0100D123C1 /* BottomToTopViewController.swift in Sources */,
 				423DAFF62BA8365000B81A0F /* SceneDelegate.swift in Sources */,
+				BFAFB7542BA97D3900F138AC /* AdjustCollectionViewInsetViewController.swift in Sources */,
 				BFAFB7512BA94E8E00F138AC /* BottomToTopCollectionViewFlowLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

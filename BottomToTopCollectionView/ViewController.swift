@@ -19,5 +19,8 @@ final class ViewController: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
 
-    @IBAction private func adjustCollectionViewInsetButtonDidTap(_ sender: UIButton) {}
+    @IBAction private func adjustCollectionViewInsetButtonDidTap(_ sender: UIButton) {
+        let vc = BottomToTopViewController(collectionViewController: AdjustCollectionViewInsetViewController())
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }

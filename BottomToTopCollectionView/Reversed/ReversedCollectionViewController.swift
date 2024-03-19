@@ -57,7 +57,7 @@ extension ReversedCollectionViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueConfiguredReusableCell(
             using: self.cellRegistration,
             for: indexPath,
-            item: self.collectionView(collectionView, numberOfItemsInSection: indexPath.section) - indexPath.item
+            item: self.collectionView(collectionView, numberOfItemsInSection: indexPath.section) - indexPath.item - 1
         )
         cell.transform = CGAffineTransform(scaleX: 1, y: -1)
         return cell
