@@ -22,7 +22,7 @@
 		BFAFB7542BA97D3900F138AC /* AdjustCollectionViewInsetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAFB7532BA97D3900F138AC /* AdjustCollectionViewInsetViewController.swift */; };
 		BFAFB7582BA988B300F138AC /* ReversedListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAFB7572BA988B300F138AC /* ReversedListView.swift */; };
 		BFAFB75A2BA98AC500F138AC /* ReversedListView.ColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAFB7592BA98AC500F138AC /* ReversedListView.ColorCell.swift */; };
-		BFAFB75C2BA98BC700F138AC /* SwiftUIReversedListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAFB75B2BA98BC700F138AC /* SwiftUIReversedListViewController.swift */; };
+		BFAFB75C2BA98BC700F138AC /* ReversedSwiftUIListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAFB75B2BA98BC700F138AC /* ReversedSwiftUIListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +43,7 @@
 		BFAFB7532BA97D3900F138AC /* AdjustCollectionViewInsetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustCollectionViewInsetViewController.swift; sourceTree = "<group>"; };
 		BFAFB7572BA988B300F138AC /* ReversedListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReversedListView.swift; sourceTree = "<group>"; };
 		BFAFB7592BA98AC500F138AC /* ReversedListView.ColorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReversedListView.ColorCell.swift; sourceTree = "<group>"; };
-		BFAFB75B2BA98BC700F138AC /* SwiftUIReversedListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIReversedListViewController.swift; sourceTree = "<group>"; };
+		BFAFB75B2BA98BC700F138AC /* ReversedSwiftUIListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReversedSwiftUIListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +81,10 @@
 				423DAFF72BA8365000B81A0F /* RootViewController.swift */,
 				42E0EED92BA87F0100D123C1 /* BottomToTopPreviewBaseViewController.swift */,
 				42E0EED72BA87E9400D123C1 /* BottomToTopPreviewProtocol.swift */,
-				423DB0072BA83D4C00B81A0F /* Reversed */,
+				423DB0072BA83D4C00B81A0F /* ReversedCollectionView */,
 				BFAFB74D2BA94E4B00F138AC /* CustomCollectionViewLayout */,
 				BFAFB7522BA97D1300F138AC /* AdjustCollectionViewInset */,
-				BFAFB7562BA987FC00F138AC /* SwiftUIReversedList */,
+				BFAFB7562BA987FC00F138AC /* ReversedSwiftUIList */,
 				42E0EED52BA87E4D00D123C1 /* UICollectionView.RegistrationExtensions.swift */,
 				423DAFF92BA8365000B81A0F /* Main.storyboard */,
 				423DAFFC2BA8365100B81A0F /* Assets.xcassets */,
@@ -94,12 +94,12 @@
 			path = BottomToTopCollectionView;
 			sourceTree = "<group>";
 		};
-		423DB0072BA83D4C00B81A0F /* Reversed */ = {
+		423DB0072BA83D4C00B81A0F /* ReversedCollectionView */ = {
 			isa = PBXGroup;
 			children = (
 				423DB0162BA844A300B81A0F /* ReversedCollectionViewController.swift */,
 			);
-			path = Reversed;
+			path = ReversedCollectionView;
 			sourceTree = "<group>";
 		};
 		BFAFB74D2BA94E4B00F138AC /* CustomCollectionViewLayout */ = {
@@ -119,14 +119,14 @@
 			path = AdjustCollectionViewInset;
 			sourceTree = "<group>";
 		};
-		BFAFB7562BA987FC00F138AC /* SwiftUIReversedList */ = {
+		BFAFB7562BA987FC00F138AC /* ReversedSwiftUIList */ = {
 			isa = PBXGroup;
 			children = (
-				BFAFB75B2BA98BC700F138AC /* SwiftUIReversedListViewController.swift */,
+				BFAFB75B2BA98BC700F138AC /* ReversedSwiftUIListViewController.swift */,
 				BFAFB7572BA988B300F138AC /* ReversedListView.swift */,
 				BFAFB7592BA98AC500F138AC /* ReversedListView.ColorCell.swift */,
 			);
-			path = SwiftUIReversedList;
+			path = ReversedSwiftUIList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,7 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFAFB74F2BA94E6E00F138AC /* CustomCollectionViewLayoutViewController.swift in Sources */,
-				BFAFB75C2BA98BC700F138AC /* SwiftUIReversedListViewController.swift in Sources */,
+				BFAFB75C2BA98BC700F138AC /* ReversedSwiftUIListViewController.swift in Sources */,
 				42E0EED62BA87E4D00D123C1 /* UICollectionView.RegistrationExtensions.swift in Sources */,
 				42E0EED82BA87E9400D123C1 /* BottomToTopPreviewProtocol.swift in Sources */,
 				423DB0182BA844A300B81A0F /* ReversedCollectionViewController.swift in Sources */,
