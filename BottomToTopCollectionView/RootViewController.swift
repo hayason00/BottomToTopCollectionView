@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  RootViewController.swift
 //
 //
 //  Created by hayason00 on 2024/03/18
@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class ViewController: UIViewController {
+final class RootViewController: UIViewController {
     @IBAction private func reversedCollectionViewButtonDidTap(_ sender: UIButton) {
         let vc = BottomToTopViewController(collectionViewController: ReversedCollectionViewController())
         navigationController?.pushViewController(vc, animated: true)

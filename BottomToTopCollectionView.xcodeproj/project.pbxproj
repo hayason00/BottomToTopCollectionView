@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		423DAFF42BA8365000B81A0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423DAFF32BA8365000B81A0F /* AppDelegate.swift */; };
 		423DAFF62BA8365000B81A0F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423DAFF52BA8365000B81A0F /* SceneDelegate.swift */; };
-		423DAFF82BA8365000B81A0F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423DAFF72BA8365000B81A0F /* ViewController.swift */; };
+		423DAFF82BA8365000B81A0F /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423DAFF72BA8365000B81A0F /* RootViewController.swift */; };
 		423DAFFB2BA8365000B81A0F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 423DAFFA2BA8365000B81A0F /* Base */; };
 		423DAFFD2BA8365100B81A0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 423DAFFC2BA8365100B81A0F /* Assets.xcassets */; };
 		423DB0002BA8365100B81A0F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 423DAFFF2BA8365100B81A0F /* Base */; };
@@ -29,7 +29,7 @@
 		423DAFF02BA8365000B81A0F /* BottomToTopCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BottomToTopCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		423DAFF32BA8365000B81A0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		423DAFF52BA8365000B81A0F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		423DAFF72BA8365000B81A0F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		423DAFF72BA8365000B81A0F /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		423DAFFA2BA8365000B81A0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		423DAFFC2BA8365100B81A0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		423DAFFF2BA8365100B81A0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 			children = (
 				423DAFF32BA8365000B81A0F /* AppDelegate.swift */,
 				423DAFF52BA8365000B81A0F /* SceneDelegate.swift */,
-				423DAFF72BA8365000B81A0F /* ViewController.swift */,
+				423DAFF72BA8365000B81A0F /* RootViewController.swift */,
 				42E0EED92BA87F0100D123C1 /* BottomToTopViewController.swift */,
 				42E0EED72BA87E9400D123C1 /* BottomToTopCollectionProtocol.swift */,
 				423DB0072BA83D4C00B81A0F /* Reversed */,
@@ -228,7 +228,7 @@
 				42E0EED82BA87E9400D123C1 /* BottomToTopCollectionProtocol.swift in Sources */,
 				423DB0182BA844A300B81A0F /* ReversedCollectionViewController.swift in Sources */,
 				BFAFB7582BA988B300F138AC /* ReversedListView.swift in Sources */,
-				423DAFF82BA8365000B81A0F /* ViewController.swift in Sources */,
+				423DAFF82BA8365000B81A0F /* RootViewController.swift in Sources */,
 				BFAFB75A2BA98AC500F138AC /* ReversedListView.ColorCell.swift in Sources */,
 				423DAFF42BA8365000B81A0F /* AppDelegate.swift in Sources */,
 				42E0EEDA2BA87F0100D123C1 /* BottomToTopViewController.swift in Sources */,
