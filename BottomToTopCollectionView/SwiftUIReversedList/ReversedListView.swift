@@ -17,10 +17,12 @@ struct ReversedListView: View {
                     ColorCell(num: index)
                         .frame(height: 40)
                         .rotationEffect(.degrees(180))
+                        .scaleEffect(x: -1, y: 1)
                 }
             }
         }
         .rotationEffect(.degrees(180))
+        .scaleEffect(x: -1, y: 1)
     }
 }
 

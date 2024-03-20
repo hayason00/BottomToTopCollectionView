@@ -35,7 +35,7 @@ final class BottomToTopCollectionViewFlowLayout: UICollectionViewFlowLayout {
         let numberOfItem = collectionView.numberOfItems(inSection: indexPath.section)
         attributes.frame = CGRect(
             x: 0,
-            y: max(contentHeight, collectionView.bounds.height) - CGFloat(numberOfItem - indexPath.item) * (Self.itemHeight + minimumLineSpacing) - minimumLineSpacing,
+            y: max(contentHeight, collectionView.bounds.height) - (CGFloat(numberOfItem - indexPath.item) * (Self.itemHeight + minimumLineSpacing) - minimumLineSpacing),
             width: contentWidth,
             height: Self.itemHeight
         )
