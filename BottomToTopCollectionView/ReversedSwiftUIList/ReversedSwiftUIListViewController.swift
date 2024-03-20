@@ -1,5 +1,5 @@
 //
-//  SwiftUIReversedListViewController.swift
+//  ReversedSwiftUIListViewController.swift
 //  BottomToTopCollectionView
 //
 //  Created by hayason00 on 2024/03/19.
@@ -8,7 +8,7 @@
 import SwiftUI
 import UIKit
 
-final class SwiftUIReversedListViewController: UIViewController {
+final class ReversedSwiftUIListViewController: UIViewController {
     private let hostingController = UIHostingController(rootView: ReversedListView(numberOfItems: 0))
 
     override func viewDidLoad() {
@@ -31,7 +31,7 @@ final class SwiftUIReversedListViewController: UIViewController {
 
 // MARK: - CollectionViewControllerProtocol
 
-extension SwiftUIReversedListViewController: BottomToTopPreviewProtocol {
+extension ReversedSwiftUIListViewController: BottomToTopPreviewProtocol {
     func appendCell() {
         hostingController.rootView.numberOfItems += 1
     }

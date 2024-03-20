@@ -25,7 +25,7 @@ final class RootViewController: UIViewController {
     }
 
     @IBAction func swiftUIReversedListButtonDidTap(_ sender: UIButton) {
-        let vc = BottomToTopPreviewBaseViewController(SwiftUIReversedListViewController())
+        let vc = BottomToTopPreviewBaseViewController(ReversedSwiftUIListViewController())
         navigationController?.pushViewController(vc, animated: true)
     }
 }
