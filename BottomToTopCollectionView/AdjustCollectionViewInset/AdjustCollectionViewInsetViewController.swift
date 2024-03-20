@@ -61,7 +61,7 @@ final class AdjustCollectionViewInsetViewController: UIViewController {
 
 // MARK: - CollectionViewControllerProtocol
 
-extension AdjustCollectionViewInsetViewController: BottomToTopCollectionProtocol {
+extension AdjustCollectionViewInsetViewController: BottomToTopPreviewProtocol {
     func appendCell() {
         numberOfItems += 1
         collectionView.reloadData()

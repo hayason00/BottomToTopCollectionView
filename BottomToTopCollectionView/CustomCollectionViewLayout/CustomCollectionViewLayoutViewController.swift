@@ -36,7 +36,7 @@ final class CustomCollectionViewLayoutViewController: UIViewController {
 
 // MARK: - CollectionViewControllerProtocol
 
-extension CustomCollectionViewLayoutViewController: BottomToTopCollectionProtocol {
+extension CustomCollectionViewLayoutViewController: BottomToTopPreviewProtocol {
     func appendCell() {
         numberOfItems += 1
         collectionView.reloadData()

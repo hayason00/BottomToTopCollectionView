@@ -39,7 +39,7 @@ final class ReversedCollectionViewController: UIViewController {
 
 // MARK: - CollectionViewControllerProtocol
 
-extension ReversedCollectionViewController: BottomToTopCollectionProtocol {
+extension ReversedCollectionViewController: BottomToTopPreviewProtocol {
     func appendCell() {
         numberOfItems += 1
         collectionView.reloadData()
