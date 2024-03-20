@@ -15,8 +15,8 @@
 		423DB0002BA8365100B81A0F /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 423DAFFF2BA8365100B81A0F /* Base */; };
 		423DB0182BA844A300B81A0F /* ReversedCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423DB0162BA844A300B81A0F /* ReversedCollectionViewController.swift */; };
 		42E0EED62BA87E4D00D123C1 /* UICollectionView.RegistrationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E0EED52BA87E4D00D123C1 /* UICollectionView.RegistrationExtensions.swift */; };
-		42E0EED82BA87E9400D123C1 /* BottomToTopPreviewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E0EED72BA87E9400D123C1 /* BottomToTopPreviewProtocol.swift */; };
-		42E0EEDA2BA87F0100D123C1 /* BottomToTopPreviewBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E0EED92BA87F0100D123C1 /* BottomToTopPreviewBaseViewController.swift */; };
+		42E0EED82BA87E9400D123C1 /* PreviewableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E0EED72BA87E9400D123C1 /* PreviewableViewController.swift */; };
+		42E0EEDA2BA87F0100D123C1 /* PreviewBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E0EED92BA87F0100D123C1 /* PreviewBaseViewController.swift */; };
 		BFAFB74F2BA94E6E00F138AC /* CustomCollectionViewLayoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAFB74E2BA94E6E00F138AC /* CustomCollectionViewLayoutViewController.swift */; };
 		BFAFB7512BA94E8E00F138AC /* BottomToTopCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAFB7502BA94E8E00F138AC /* BottomToTopCollectionViewFlowLayout.swift */; };
 		BFAFB7542BA97D3900F138AC /* AdjustCollectionViewInsetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAFB7532BA97D3900F138AC /* AdjustCollectionViewInsetViewController.swift */; };
@@ -36,8 +36,8 @@
 		423DB0012BA8365100B81A0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		423DB0162BA844A300B81A0F /* ReversedCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReversedCollectionViewController.swift; sourceTree = "<group>"; };
 		42E0EED52BA87E4D00D123C1 /* UICollectionView.RegistrationExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionView.RegistrationExtensions.swift; sourceTree = "<group>"; };
-		42E0EED72BA87E9400D123C1 /* BottomToTopPreviewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomToTopPreviewProtocol.swift; sourceTree = "<group>"; };
-		42E0EED92BA87F0100D123C1 /* BottomToTopPreviewBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomToTopPreviewBaseViewController.swift; sourceTree = "<group>"; };
+		42E0EED72BA87E9400D123C1 /* PreviewableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewableViewController.swift; sourceTree = "<group>"; };
+		42E0EED92BA87F0100D123C1 /* PreviewBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewBaseViewController.swift; sourceTree = "<group>"; };
 		BFAFB74E2BA94E6E00F138AC /* CustomCollectionViewLayoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewLayoutViewController.swift; sourceTree = "<group>"; };
 		BFAFB7502BA94E8E00F138AC /* BottomToTopCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomToTopCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		BFAFB7532BA97D3900F138AC /* AdjustCollectionViewInsetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdjustCollectionViewInsetViewController.swift; sourceTree = "<group>"; };
@@ -79,8 +79,8 @@
 				423DAFF32BA8365000B81A0F /* AppDelegate.swift */,
 				423DAFF52BA8365000B81A0F /* SceneDelegate.swift */,
 				423DAFF72BA8365000B81A0F /* RootViewController.swift */,
-				42E0EED92BA87F0100D123C1 /* BottomToTopPreviewBaseViewController.swift */,
-				42E0EED72BA87E9400D123C1 /* BottomToTopPreviewProtocol.swift */,
+				42E0EED92BA87F0100D123C1 /* PreviewBaseViewController.swift */,
+				42E0EED72BA87E9400D123C1 /* PreviewableViewController.swift */,
 				423DB0072BA83D4C00B81A0F /* ReversedCollectionView */,
 				BFAFB74D2BA94E4B00F138AC /* CustomCollectionViewLayout */,
 				BFAFB7522BA97D1300F138AC /* AdjustCollectionViewInset */,
@@ -225,13 +225,13 @@
 				BFAFB74F2BA94E6E00F138AC /* CustomCollectionViewLayoutViewController.swift in Sources */,
 				BFAFB75C2BA98BC700F138AC /* ReversedSwiftUIListViewController.swift in Sources */,
 				42E0EED62BA87E4D00D123C1 /* UICollectionView.RegistrationExtensions.swift in Sources */,
-				42E0EED82BA87E9400D123C1 /* BottomToTopPreviewProtocol.swift in Sources */,
+				42E0EED82BA87E9400D123C1 /* PreviewableViewController.swift in Sources */,
 				423DB0182BA844A300B81A0F /* ReversedCollectionViewController.swift in Sources */,
 				BFAFB7582BA988B300F138AC /* ReversedListView.swift in Sources */,
 				423DAFF82BA8365000B81A0F /* RootViewController.swift in Sources */,
 				BFAFB75A2BA98AC500F138AC /* ReversedListView.ColorCell.swift in Sources */,
 				423DAFF42BA8365000B81A0F /* AppDelegate.swift in Sources */,
-				42E0EEDA2BA87F0100D123C1 /* BottomToTopPreviewBaseViewController.swift in Sources */,
+				42E0EEDA2BA87F0100D123C1 /* PreviewBaseViewController.swift in Sources */,
 				423DAFF62BA8365000B81A0F /* SceneDelegate.swift in Sources */,
 				BFAFB7542BA97D3900F138AC /* AdjustCollectionViewInsetViewController.swift in Sources */,
 				BFAFB7512BA94E8E00F138AC /* BottomToTopCollectionViewFlowLayout.swift in Sources */,
