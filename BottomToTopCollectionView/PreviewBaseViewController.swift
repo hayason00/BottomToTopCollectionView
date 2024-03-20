@@ -1,5 +1,5 @@
 //
-//  BottomToTopPreviewBaseViewController.swift
+//  PreviewBaseViewController.swift
 //  BottomToTopCollectionView
 //
 //  Created by hayason00 on 2024/03/18
@@ -8,8 +8,8 @@
 
 import UIKit
 
-final class BottomToTopPreviewBaseViewController: UIViewController {
-    private let bottomToTopViewController: BottomToTopPreviewProtocol
+final class PreviewBaseViewController: UIViewController {
+    private let previewViewController: PreviewableViewController
 
     private let stackView: UIStackView = {
         let stackView = UIStackView()
@@ -23,8 +23,8 @@ final class BottomToTopPreviewBaseViewController: UIViewController {
         return UIButton(configuration: configuration)
     }()
 
-    init(_ bottomToTopViewController: BottomToTopPreviewProtocol) {
-        self.bottomToTopViewController = bottomToTopViewController
+    init(_ previewViewController: PreviewableViewController) {
+        self.previewViewController = previewViewController
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -40,14 +40,14 @@ final class BottomToTopPreviewBaseViewController: UIViewController {
         setupSubviews()
         setupConstraints()
         appendCellButton.addAction(.init { [weak self] _ in
-            self?.bottomToTopViewController.appendCell()
+            self?.previewViewController.appendCell()
         }, for: .primaryActionTriggered)
     }
 
     private func setupSubviews() {
-        addChild(bottomToTopViewController)
-        stackView.addArrangedSubview(bottomToTopViewController.view)
-        bottomToTopViewController.didMove(toParent: self)
+        addChild(previewViewController)
+        stackView.addArrangedSubview(previewViewController.view)
+        previewViewController.didMove(toParent: self)
 
         stackView.addArrangedSubview(appendCellButton)
 

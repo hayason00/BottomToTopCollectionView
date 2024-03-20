@@ -10,22 +10,22 @@ import UIKit
 
 final class RootViewController: UIViewController {
     @IBAction private func reversedCollectionViewButtonDidTap(_ sender: UIButton) {
-        let vc = BottomToTopPreviewBaseViewController(ReversedCollectionViewController())
+        let vc = PreviewBaseViewController(ReversedCollectionViewController())
         navigationController?.pushViewController(vc, animated: true)
     }
 
     @IBAction private func customCollectionViewLayoutButtonDidTap(_ sender: UIButton) {
-        let vc = BottomToTopPreviewBaseViewController(CustomCollectionViewLayoutViewController())
+        let vc = PreviewBaseViewController(CustomCollectionViewLayoutViewController())
         navigationController?.pushViewController(vc, animated: true)
     }
 
     @IBAction private func adjustCollectionViewInsetButtonDidTap(_ sender: UIButton) {
-        let vc = BottomToTopPreviewBaseViewController(AdjustCollectionViewInsetViewController())
+        let vc = PreviewBaseViewController(AdjustCollectionViewInsetViewController())
         navigationController?.pushViewController(vc, animated: true)
     }
 
     @IBAction func swiftUIReversedListButtonDidTap(_ sender: UIButton) {
-        let vc = BottomToTopPreviewBaseViewController(ReversedSwiftUIListViewController())
+        let vc = PreviewBaseViewController(ReversedSwiftUIListViewController())
         navigationController?.pushViewController(vc, animated: true)
     }
 }

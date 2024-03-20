@@ -31,7 +31,7 @@ final class ReversedSwiftUIListViewController: UIViewController {
 
 // MARK: - CollectionViewControllerProtocol
 
-extension ReversedSwiftUIListViewController: BottomToTopPreviewProtocol {
+extension ReversedSwiftUIListViewController: PreviewableViewController {
     func appendCell() {
         hostingController.rootView.numberOfItems += 1
     }
