@@ -14,13 +14,13 @@ final class RootViewController: UIViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
 
-    @IBAction private func customCollectionViewLayoutButtonDidTap(_ sender: UIButton) {
-        let vc = PreviewBaseViewController(CustomCollectionViewLayoutViewController())
+    @IBAction private func adjustCollectionViewInsetButtonDidTap(_ sender: UIButton) {
+        let vc = PreviewBaseViewController(AdjustCollectionViewInsetViewController())
         navigationController?.pushViewController(vc, animated: true)
     }
 
-    @IBAction private func adjustCollectionViewInsetButtonDidTap(_ sender: UIButton) {
-        let vc = PreviewBaseViewController(AdjustCollectionViewInsetViewController())
+    @IBAction private func customCollectionViewLayoutButtonDidTap(_ sender: UIButton) {
+        let vc = PreviewBaseViewController(CustomCollectionViewLayoutViewController())
         navigationController?.pushViewController(vc, animated: true)
     }
 
